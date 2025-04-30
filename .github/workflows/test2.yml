@@ -1,0 +1,22 @@
+name: tests2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_test:
+    runs-on: ubunto-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+  
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+  
+      - name: Check Python version
+        run: python3 --version
