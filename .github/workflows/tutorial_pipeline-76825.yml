@@ -1,0 +1,22 @@
+# Generated CI/CD Pipeline YAML
+# This YAML is compatible with GitHub Actions
+
+# Pipeline: tutorial_pipeline
+name: tutorial_pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_test:
+    # Build and test the instalation
+    runs-on: ubuntu-latest
+    steps:
+            - name: command_97222
+              uses: action/checkout@v4
+            - name: Install dependencies
+              uses: actions/setup-node@v4
+              with:
+                        node-version:'20'
+            - name: Build and test
+              run: r --v
